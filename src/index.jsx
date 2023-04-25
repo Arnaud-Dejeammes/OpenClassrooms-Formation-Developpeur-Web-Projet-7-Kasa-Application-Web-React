@@ -25,6 +25,8 @@ import reportWebVitals from "./reportWebVitals";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
+  // Syntaxe pour react-router-dom@6.10.0
+  // <BrowserRouter><Routes><Route path="" element={<Component/>}/></Routes></BrowserRouter>
   <React.StrictMode>
     {/* <App /> */}
     {/* <Home/> */}    
