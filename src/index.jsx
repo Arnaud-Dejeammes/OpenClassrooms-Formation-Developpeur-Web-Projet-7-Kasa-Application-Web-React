@@ -32,11 +32,11 @@ root.render(
     {/* <Home/> */}    
     <Router>
       <Header/>
-      <Routes>        
+      <Routes>
+        <Route path="*" element={<NotFound/>}/>        
         <Route path="/" element={<Home/>}/>
         <Route path="/accommodation" element={<Accommodation/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/404" element={<NotFound/>}/>
+        <Route path="/about" element={<About/>}/>        
       </Routes>
     </Router>    
   </React.StrictMode>
