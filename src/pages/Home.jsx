@@ -1,7 +1,8 @@
 import logo from '../logo.svg';
 import '../styles/App.css';
 
-function App() {
+// function App() {
+function Home() {
   return (
     <div className="App">
       <header className="App-header">
@@ -15,11 +16,12 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          kasa
         </a>
       </header>
     </div>
   );
 }
 
-export default App;
+export default Home;
+// export default App;
