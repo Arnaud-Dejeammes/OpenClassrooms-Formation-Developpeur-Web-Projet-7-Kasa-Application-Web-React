@@ -1,18 +1,25 @@
 // Bug report :
 // Lorsque le fichier index.js est renommé index.jsx (ou inversement), une erreur apparaît :
-// il suffit d'arrêter npm puis de le relancer
+// il suffit d'arrêter npm, puis le relancer
 
+// MODULES
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./index.css";
+
+// PAGES
 // import App from "./components/App";
 import Home from "./pages/Home";
 import Accommodation from "./pages/Accommodation";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
+// COMPONENTS
+import Header from "./components/Header"
+
+// TOOLS
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -20,9 +27,10 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    {/* <Home/> */}
+    {/* <Home/> */}    
     <Router>
-      <Routes>
+      <Header/>
+      <Routes>        
         <Route path="/" element={<Home/>}/>
         <Route path="/accommodation" element={<Accommodation/>}/>
         <Route path="/about" element={<About/>}/>
