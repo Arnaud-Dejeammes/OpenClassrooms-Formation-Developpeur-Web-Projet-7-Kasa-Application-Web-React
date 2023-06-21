@@ -3,4 +3,8 @@ const colors = {
     secondary: "#ffffff"    
 }
 
-export default colors
+const getColor = (props) => {
+    return props.isPrimary ? colors.primary : colors.secondary
+}
+
+export default getColor
