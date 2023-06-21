@@ -7,8 +7,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import "./index.css";
-
 // PAGES
 // import App from "./components/App";
 import Home from "./pages/Home";
@@ -22,7 +20,15 @@ import Header from "./components/Header"
 // TOOLS
 import reportWebVitals from "./reportWebVitals";
 
+// STYLES
+import { createGlobalStyle } from "styled-components";
+const GlobalStyle = createGlobalStyle`
+  body {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+  }
+`
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 
 root.render(
   // Syntaxe pour react-router-dom@6.10.0 :
@@ -31,6 +37,7 @@ root.render(
     {/* <App /> */}
     {/* <Home/> */}    
     <Router>
+      <GlobalStyle/>
       <Header/>
       <Routes>
         <Route path="*" element={<NotFound/>}/>        

@@ -36,6 +36,7 @@ const StyledLink = styled(RouterLink)`
 `
 
 function Header() {
+    // <img src={logo} className="App-logo" alt="logo"/>
     return (
         <nav>
             <ul>
