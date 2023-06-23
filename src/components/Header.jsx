@@ -34,17 +34,30 @@ const HeaderStyle = styled.header`
     height: 68px;
     justify-content: center;
     align-items: center;
-    gap: 720.678px;      
+    gap: 720.678px;
+    
+    @media (max-width: 365px) {
+        width: 375px;
+        padding: 20px 19px 0px 20px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 16px;        
+    }
 `
 
-const StyledLink = styled(RouterLink)`    
+const NavBar = styled.nav`    
+    
+`
+
+const StyledLink = styled(RouterLink)`
     font-size: 24px;
     font-weight: 500;
     line-height: 34px;
     letter-spacing: 0em;
     text-align: right;
     color: ${(props) => getColor(props)};
-    text-decoration: none;
+    text-decoration: none;    
 
     &.active {
         text-decoration: underline;
@@ -54,18 +67,18 @@ const StyledLink = styled(RouterLink)`
 function Header() {
     // <img src={logo} className="App-logo" alt="logo"/>
     return (        
-        <HeaderStyle>
+        <HeaderStyle>            
             <Logo/>
-            <nav>
-                <ul>
+            <NavBar>
+                <ul style={{display: "flex"}}>
                     <li>
-                        <StyledLink to="/" isPrimary>ACCUEIL</StyledLink>
+                        <StyledLink to="/" isPrimary>accueil</StyledLink>
                     </li>
                     <li>
-                        <StyledLink to="/about" isPrimary>A PROPOS</StyledLink>
+                        <StyledLink to="/about" isPrimary>à propos</StyledLink>
                     </li>
                 </ul>
-            </nav>
+            </NavBar>
         </HeaderStyle>        
     )
 }
