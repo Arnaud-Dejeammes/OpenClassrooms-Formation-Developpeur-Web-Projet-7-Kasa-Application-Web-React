@@ -1,15 +1,18 @@
+// A SUPPRIMER
 // import { Link } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import styled from "styled-components"
-import getColor from "../styles/colors"
+// import getColor from "../styles/colors"
 import Logo from "../assets/logo"
+import NavBar from "./NavBar"
 
+// A SUPPRIMER
 // Wrapper pour Link (élément DOM), qui ne reconnaît pas les attributs personnalisés.
 // RouterLink reçoit toutes les props et les redistribue au composant Link
 // grâce à ...rest (spread operator). Destructuration de la prop isPrimary.
-const RouterLink = ({isPrimary, ...rest}) => (
-    <NavLink {...rest}/>
-);
+// const RouterLink = ({isPrimary, ...rest}) => (
+//     <NavLink {...rest}/>
+// );
 // Encapsule la logique de passage des props au composant Link et
 // sépare celle liée à la navigation avec les autres aspects
 
@@ -46,39 +49,27 @@ const HeaderStyle = styled.header`
     }
 `
 
-const NavBar = styled.nav`    
-    
-`
+// A SUPPRIMER
+// const StyledLink = styled(RouterLink)`
+//     font-size: 24px;
+//     font-weight: 500;
+//     line-height: 34px;
+//     letter-spacing: 0em;
+//     text-align: right;
+//     color: ${(props) => getColor(props)};
+//     text-decoration: none;    
 
-const StyledLink = styled(RouterLink)`
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 34px;
-    letter-spacing: 0em;
-    text-align: right;
-    color: ${(props) => getColor(props)};
-    text-decoration: none;    
-
-    &.active {
-        text-decoration: underline;
-    }
-`
+//     &.active {
+//         text-decoration: underline;
+//     }
+// `
 
 function Header() {
     // <img src={logo} className="App-logo" alt="logo"/>
     return (        
         <HeaderStyle>            
             <Logo/>
-            <NavBar>
-                <ul style={{display: "flex"}}>
-                    <li>
-                        <StyledLink to="/" isPrimary>accueil</StyledLink>
-                    </li>
-                    <li>
-                        <StyledLink to="/about" isPrimary>à propos</StyledLink>
-                    </li>
-                </ul>
-            </NavBar>
+            <NavBar/>
         </HeaderStyle>        
     )
 }
