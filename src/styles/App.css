@@ -1,1 +1,13 @@
 @import "reset-css";
+
+body {
+    width: 1240px;
+    height: 1095px;    
+}
+
+@media (max-width: 365px) {
+    body {
+      width: 336px;
+      height: 938px;
+    }
+}

@@ -25,20 +25,38 @@ const RouterLink = ({isPrimary, ...rest}) => (
 // facilité de gestion, maintenabilité
 
 // Autre solution :
-// supprimer RouterLink revenir à const StyledLink = styled(Link)
+// supprimer RouterLink et revenir à const StyledLink = styled(Link)
 // et indiquer isPrimary="true"
+// Alternative :
+// Utilisation du préfixe "data-" pour des attributs personnalisés
+// (voir "logo.jsx").
 
 const StyledLink = styled(RouterLink)`
+    display: flex;
+    width: 116px;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-shrink: 0;
+
     font-size: 24px;
     font-weight: 500;
-    line-height: 34px;
+    // line-height: 34px;
+    line-height: 142.6%;
     letter-spacing: 0em;
     text-align: right;
     color: ${(props) => getColor(props)};
-    text-decoration: none;    
+    text-decoration: none;
+      
 
     &.active {
         text-decoration: underline;
+    }
+
+    @media (max-width: 365px) {        
+        width: 10px;
+        
+        font-size: 12px;
+        // font-style: normal;        
     }
 `
 
