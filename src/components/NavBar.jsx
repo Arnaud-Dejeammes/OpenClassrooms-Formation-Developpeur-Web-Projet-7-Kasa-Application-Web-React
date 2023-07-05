@@ -1,9 +1,9 @@
-import {useEffect, useState} from "react";
+// import {useEffect, useState} from "react";
 import {NavLink} from "react-router-dom";
 import styled from "styled-components"
 import getColor from "../styles/colors"
-import {FirstLettersUpperCase, UpperCase} from "./utils/typography"
-// import setCase from "./utils/typography"
+// import {FirstLettersUpperCase, UpperCase} from "./utils/typography"
+import SetCase from "./utils/typography"
 
 // Wrapper pour Link (élément DOM), qui ne reconnaît pas les attributs personnalisés.
 // RouterLink reçoit toutes les props et les redistribue au composant Link
@@ -67,7 +67,7 @@ const UlWrapper = styled.ul`
 // }
 
 function NavBar() {    
-    const [smallScreen, setScreenSize] = useState(window.innerWidth <= 365);
+    // const [smallScreen, setScreenSize] = useState(window.innerWidth <= 365);
     // Stockage de la taille de l'écran.
     // useState : hook de déclaration de variable d'état.
     // Retour d'un tableau avec la valeur d'état et une fonction
@@ -76,30 +76,30 @@ function NavBar() {
     const home = "accueil"
     const about = "à propos"
 
-    function updateScreenSize() {
-        setScreenSize(window.innerWidth <= 365);
-    }
+    // function updateScreenSize() {
+    //     setScreenSize(window.innerWidth <= 365);
+    // }
     
     // Sans la mise à jour de façon dynamique de la taille de l'écran
     // (avec le gestionnaire d'évènement "resize", useEffecte et useState),
     // la valeur de smallScreen se voit déterminée une seule fois, lors 
     // du rendu de NavBar.
 
-    useEffect(() => {
-        window.addEventListener("resize", updateScreenSize);
-            return () => {
-                window.removeEventListener("resize", updateScreenSize);
-            };
-    }, []);
+    // useEffect(() => {
+    //     window.addEventListener("resize", updateScreenSize);
+    //         return () => {
+    //             window.removeEventListener("resize", updateScreenSize);
+    //         };
+    // }, []);
     // Mise à jour de l'état de la taille de l'écran.
     // useEffect : hook pour gérer les effets secondaires,
     // comme la mise à jour de l'interface utilisateur.
     // Déclaration de code devant s'exécuter après chaque rendu du composant,
     // déclenché par un changement d'état.    
 
-    function SetCase({text}) {        
-        return smallScreen ? <UpperCase text={text}/> : <FirstLettersUpperCase text={text}/>;
-    };
+    // function SetCase({text}) {        
+    //     return smallScreen ? <UpperCase text={text}/> : <FirstLettersUpperCase text={text}/>;
+    // };
 
     return (
         <NavWrapper>

@@ -1,3 +1,5 @@
+import {useEffect, useState} from "react";
+
 // Gestionnaire de casse
 
 function FirstLettersUpperCase({text}) {
@@ -10,6 +12,23 @@ function FirstLettersUpperCase({text}) {
 
 function UpperCase({text}) {
     return text.toUpperCase();
+};
+
+function SetCase({text}) {    
+    const [smallScreen, setScreenSize] = useState(window.innerWidth <= 365);
+
+    function updateScreenSize() {
+        setScreenSize(window.innerWidth <= 365);
+    }
+
+    useEffect(() => {
+        window.addEventListener("resize", updateScreenSize);
+            return () => {
+                window.removeEventListener("resize", updateScreenSize);
+            };
+    }, []);    
+
+    return smallScreen ? <UpperCase text={text}/> : <FirstLettersUpperCase text={text}/>;
 };
 
 // function SetCase({text, isSmallScreen}) {    
@@ -45,7 +64,8 @@ function UpperCase({text}) {
 
 // export {FirstLettersUpperCase, UpperCase};
 
-export {FirstLettersUpperCase, UpperCase};
+// export {FirstLettersUpperCase, UpperCase};
+export default SetCase;
 
 // function FirstLetterUpperCase(text) {
 //     return (text.charAt(0).toUpperCase() + text.slice(1))
