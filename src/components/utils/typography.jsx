@@ -1,14 +1,49 @@
-function FirstLettersUpperCase(props) {
-    const words = props.text.split(" ");
+// Gestionnaire de casse
+
+function FirstLettersUpperCase({text}) {
+    const words = text.split(" ");
     const upperCasedWords = words.map((word) => {
-        return (word.charAt(0).toUpperCase() + word.slice(1))
+        return word.charAt(0).toUpperCase() + word.slice(1);
     });
     return upperCasedWords.join(" ");    
 };
 
-function UpperCase(props) {
-    return (props.text.toUpperCase());
-}
+function UpperCase({text}) {
+    return text.toUpperCase();
+};
+
+// function SetCase({text, isSmallScreen}) {    
+//     return isSmallScreen ? <UpperCase text={text}/> : <FirstLettersUpperCase text={text}/>
+// };
+
+
+// function SetCase(props) {
+//     const {text, isSmallScreen} = props    
+
+//     if (isSmallScreen) {
+//         return text.toUpperCase()
+//     } else {
+//         const words = props.text.split(" ");
+//         const upperCasedWords = words.map((word) => {
+//         return (word.charAt(0).toUpperCase() + word.slice(1))
+//     });
+//     return upperCasedWords.join(" ");    
+//     }    
+// };
+
+// function FirstLettersUpperCase(props) {
+//     const words = props.text.split(" ");
+//     const upperCasedWords = words.map((word) => {
+//         return (word.charAt(0).toUpperCase() + word.slice(1))
+//     });
+//     return upperCasedWords.join(" ");    
+// };
+
+// function UpperCase(props) {
+//     return (props.text.toUpperCase());
+// }
+
+// export {FirstLettersUpperCase, UpperCase};
 
 export {FirstLettersUpperCase, UpperCase};
 
