@@ -1,0 +1,40 @@
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 1240px;
+    height: 223px;
+    flex-shrink: 0;
+
+    border-radius: 25px;
+    /* opacity: 0.30000001192092896; */
+    background: #000;
+
+    /* background-image: url(../assets/home-banner.jpg); */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../assets/home-banner.jpg);
+    /* Pour plus de vert et de bleu */
+    /* background: linear-gradient(rgba(0, 100, 150, 0.3), rgba(0, 100, 150, 0.3)), url(../assets/home-banner.jpg); */
+    background-size: cover;
+    background-position: center;    
+}  
+
+.banner h1 {
+    /* text-align: center; */
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;    
+}
+
+@media screen and (max-width: 365px) {
+    .banner {
+        width: 335px;
+        height: 111px;        
+
+        border-radius: 10px;
+
+        /* Saut après la virgule \n  */
+        /* white-space: pre-line; */
+    }        
+}

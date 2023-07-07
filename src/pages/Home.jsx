@@ -1,5 +1,6 @@
 import '../styles/App.css';
 import styled from "styled-components"
+import Banner from "../components/Banner"
 
 const HomeStyle = styled.div`
   display: flex;
@@ -25,7 +26,7 @@ const HomeStyle = styled.div`
 function Home() {
   return (
     <HomeStyle>
-          kasa
+      <Banner/>          
     </HomeStyle>
   );
 }

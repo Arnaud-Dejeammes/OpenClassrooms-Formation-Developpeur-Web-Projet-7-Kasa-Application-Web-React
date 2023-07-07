@@ -7,4 +7,4 @@ const getColor = (props) => {
     return props.$primary ? colors.primary : colors.secondary
 }
 
-export default getColor
+export default getColor;
