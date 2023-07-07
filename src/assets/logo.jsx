@@ -24,7 +24,7 @@ const TranslatedLetters = styled.span`
 `
 
 function Logo() {
-    const fillColor = getColor({isPrimary: true});    
+    const fillColor = getColor({$primary: true});    
     const [smallScreen, setScreenSize] = useState(window.innerWidth <= 365);
 
     function updateScreenSize() {

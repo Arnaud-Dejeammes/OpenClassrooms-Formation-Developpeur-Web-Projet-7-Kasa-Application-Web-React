@@ -8,6 +8,7 @@ const DropdownStyle = styled.button`
     height: 52px;
     flex-shrink: 0;
     
+    border: none;
     border-radius: 10px;
     background: ${(props) => getColor(props)};
 
@@ -18,12 +19,11 @@ const DropdownStyle = styled.button`
 `
 
 function Dropdown() {
-    const [isOpen, setIsOpen] = useState(false);
+    const [$open, setIsOpen] = useState(false);
 
-    return (
-        
-        <DropdownStyle isPrimary onClick={() => setIsOpen(!isOpen)}>            
-            <DownChevron isOpen={isOpen}/>
+    return (        
+        <DropdownStyle $primary onClick={() => setIsOpen(!$open)}>            
+            <DownChevron $open={$open}/>
         </DropdownStyle>
     );
 };

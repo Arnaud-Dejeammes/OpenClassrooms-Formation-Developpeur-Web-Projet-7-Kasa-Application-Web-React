@@ -4,7 +4,7 @@ const colors = {
 }
 
 const getColor = (props) => {
-    return props.isPrimary ? colors.primary : colors.secondary
+    return props.$primary ? colors.primary : colors.secondary
 }
 
 export default getColor

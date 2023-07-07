@@ -5,7 +5,7 @@ const DownChevronStyle = styled.div`
     height: 32px;
     // transform: rotate(90deg);
     flex-shrink: 0;
-    transform: rotate(${(props) => (props.isOpen ? "-180deg" : "0deg")});
+    transform: rotate(${(props) => (props.$open ? "-180deg" : "0deg")});
     transition: transform 0.2s ease;    
 
     @media (max-width: 365px) {
@@ -14,9 +14,9 @@ const DownChevronStyle = styled.div`
     }
 `
 
-function DownChevron({isOpen}) {
+function DownChevron({$open}) {
     return (
-        <DownChevronStyle isOpen={isOpen}>
+        <DownChevronStyle $open={$open}>
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_142304_633)">
                 {/* Invalid DOM property `clip-path`. Did you mean `clipPath`? */}

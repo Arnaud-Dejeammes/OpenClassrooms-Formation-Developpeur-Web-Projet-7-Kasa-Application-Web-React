@@ -7,7 +7,7 @@ import SetCase from "./utils/typography"
 // Wrapper pour Link (élément DOM), qui ne reconnaît pas les attributs personnalisés.
 // RouterLink reçoit toutes les props et les redistribue au composant Link
 // grâce à ...rest (spread operator). Destructuration de la prop isPrimary.
-const RouterLink = ({isPrimary, ...rest}) => (
+const RouterLink = ({$primary, ...rest}) => (
     <NavLink {...rest}/>
 );
 // Encapsule la logique de passage des props au composant Link et
@@ -30,6 +30,8 @@ const RouterLink = ({isPrimary, ...rest}) => (
 // Alternative :
 // Utilisation du préfixe "data-" pour des attributs personnalisés
 // (voir "logo.jsx").
+
+// Changement de isPrimary pour $primary (syntaxe styled-components)
 
 const StyledLink = styled(RouterLink)`
     display: flex;
@@ -76,12 +78,12 @@ function NavBar() {
         <NavWrapper>
             <UlWrapper>            
                 <li>
-                    <StyledLink to="/" isPrimary>
+                    <StyledLink to="/" $primary>
                         <SetCase text={home}/>                        
                     </StyledLink>
                 </li>
                 <li>
-                    <StyledLink to="/about" isPrimary>
+                    <StyledLink to="/about" $primary>
                         <SetCase text={about}/>
                     </StyledLink>
                 </li>            
