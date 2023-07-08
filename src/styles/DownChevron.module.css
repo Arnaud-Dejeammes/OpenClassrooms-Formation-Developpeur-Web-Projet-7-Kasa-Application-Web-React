@@ -1,0 +1,12 @@
+.down-chevron {
+    width: 32px;
+    height: 32px;    
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 365px) {
+    .down-chevron {
+        width: 18.42px;
+        height: 18.42px;        
+    }    
+}

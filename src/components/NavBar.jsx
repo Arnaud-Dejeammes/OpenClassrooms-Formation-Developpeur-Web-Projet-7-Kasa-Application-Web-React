@@ -1,6 +1,7 @@
 // import {useEffect, useState} from "react";
 import {NavLink} from "react-router-dom";
 import styled from "styled-components"
+import styles from "../styles/NavBar.module.css"
 import getColor from "../styles/colors"
 import SetCase from "./utils/typography"
 
@@ -34,39 +35,17 @@ const RouterLink = ({$primary, ...rest}) => (
 // Changement de isPrimary pour $primary (syntaxe styled-components)
 
 const StyledLink = styled(RouterLink)`
-    display: flex;
-    width: 116px;
-    flex-direction: column;
-    justify-content: flex-end;
-    flex-shrink: 0;
-
-    font-size: 24px;
-    font-weight: 500;
-    // line-height: 34px;
-    line-height: 142.6%;
-    letter-spacing: 0em;
-    text-align: right;
+// Propriétés non accessibles via le fichier de style :
     color: ${(props) => getColor(props)};
+    
     text-decoration: none;
-      
-
+    
     &.active {
         text-decoration: underline;
-    }
-
-    @media (max-width: 365px) {        
-        width: 10px;
-        
-        font-size: 12px;
-        // font-style: normal;        
     }
 `
 
 const NavWrapper = styled.nav`
-`
-
-const UlWrapper = styled.ul`
-    display: flex;
 `
 
 function NavBar() {
@@ -75,8 +54,8 @@ function NavBar() {
     const about = "à propos"
 
     return (
-        <NavWrapper>
-            <UlWrapper>            
+        <NavWrapper className={styles.navbar}>
+            <ul>            
                 <li>
                     <StyledLink to="/" $primary>
                         <SetCase text={home}/>                        
@@ -87,7 +66,7 @@ function NavBar() {
                         <SetCase text={about}/>
                     </StyledLink>
                 </li>            
-            </UlWrapper>       
+            </ul>       
         </NavWrapper>
     )
 }

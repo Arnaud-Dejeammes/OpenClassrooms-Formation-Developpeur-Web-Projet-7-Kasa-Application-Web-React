@@ -1,0 +1,15 @@
+.drop-down {
+    width: 582px;
+    height: 52px;
+    flex-shrink: 0;
+    
+    border: none;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 365px) {
+    .drop-down {
+        width: 335px;
+        height: 29.931px;
+    }
+}

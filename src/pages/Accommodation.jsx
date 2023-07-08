@@ -1,3 +1,5 @@
+// Régler l'application de reset et du style body à l'ensemble des pages !!!
+
 import PropTypes from "prop-types"
 import AccommodationDatabase from "../data/accommodationDatabase.json";
 

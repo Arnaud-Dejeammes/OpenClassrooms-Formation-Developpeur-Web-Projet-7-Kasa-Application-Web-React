@@ -1,22 +1,13 @@
-import styled from "styled-components"
-import Dropdown from "../components/Dropdown";
-
-const AboutStyle = styled.div`
-  width: 1440px;
-  height: 1024px;
-
-  @media (max-width: 365px) {
-    width: 375px;
-    height: 812px;
-  }
-`
+// Régler l'application de reset et du style body à l'ensemble des pages !!!
+// import styled from "styled-components";
+import styles from "../styles/About.module.css"
+import DropDown from "../components/DropDown";
 
 function About() {
-    return (
-      // <div className="App">A propos</div>
-      <AboutStyle>
-        <Dropdown/>
-      </AboutStyle>
+    return (      
+      <div className={styles.about}>
+        <DropDown/>
+      </div>
     )
 }
 

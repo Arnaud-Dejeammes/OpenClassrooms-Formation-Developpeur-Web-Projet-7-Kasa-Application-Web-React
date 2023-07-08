@@ -1,0 +1,23 @@
+.logo {
+    display: flex;
+    width: 210px;
+    /* width: fit-content; */    
+    height: 68px;
+    flex-shrink: 0;    
+}
+
+@media screen and (max-width: 365px) {
+    .logo {
+        width: 145px;
+        height: 47px;
+    }
+}
+
+.logo-letter {    
+    margin: 5px;
+}
+
+.translated-letter {
+    display: flex;
+    transform: translate(0, 13px);
+}

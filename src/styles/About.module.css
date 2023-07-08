@@ -1,0 +1,11 @@
+.about {
+    width: 1440px;
+    height: 1024px;
+}
+
+@media screen and (max-width: 365px) {
+    .about {
+        width: 375px;
+        height: 812px;
+    }    
+  }

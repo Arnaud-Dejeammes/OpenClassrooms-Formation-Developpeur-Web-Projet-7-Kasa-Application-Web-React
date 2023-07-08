@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    width: 116px;
+    /* flex-direction: column; */
+    justify-content: flex-end;
+    flex-shrink: 0;
+
+    font-size: 24px;
+    font-weight: 500;   
+    line-height: 142.6%;
+    letter-spacing: 0em;
+    text-align: right;
+    
+    /* text-decoration: none; */
+}
+
+/* .navbar.active {
+    text-decoration: underline;
+} */
+
+.navbar ul {
+    display: flex;
+}
+
+@media screen and (max-width: 365px) {
+    .navbar{
+        width: 10px;
+        font-size: 12px;
+        /* font-style: normal;*/}    
+}

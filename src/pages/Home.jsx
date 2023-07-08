@@ -1,33 +1,20 @@
-import '../styles/App.css';
-import styled from "styled-components"
-import Banner from "../components/Banner"
+// Conflit de styles avec ce fichier et "../styles/Home.module.css"
+// suite au passage de "styled.div" à "module.css" :
+// import '../styles/App.css';
+// Régler l'application de reset et du style body à l'ensemble des pages !!!
 
-const HomeStyle = styled.div`
-  display: flex;
-  width: 1440px;
-  padding: 40px 100px 0px 100px;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  gap: 63px;
+// import styled from "styled-components"
+import styles from "../styles/Home.module.css";
+import Banner from "../components/Banner";
 
-  @media (max-width: 365px) {
-    display: flex;
-    width: 375px;
-    padding: 20px 19px 0px 20px;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    gap: 16px;    
-  }
-`
+// const HomeStyle = styled.div``
 
 // function App() {
 function Home() {
   return (
-    <HomeStyle>
+    <div className={styles.home}>
       <Banner/>          
-    </HomeStyle>
+    </div>
   );
 }
 

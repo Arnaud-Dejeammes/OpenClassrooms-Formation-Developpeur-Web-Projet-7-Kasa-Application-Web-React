@@ -1,22 +1,17 @@
 import styled from "styled-components"
+import styles from "../styles/DownChevron.module.css";
 
-const DownChevronStyle = styled.div`
-    width: 32px;
-    height: 32px;
-    // transform: rotate(90deg);
-    flex-shrink: 0;
+const DownChevronStyle = styled.div`    
     transform: rotate(${(props) => (props.$open ? "-180deg" : "0deg")});
-    transition: transform 0.2s ease;    
-
-    @media (max-width: 365px) {
-        width: 18.42px;
-        height: 18.42px;        
-    }
+    transition: transform 0.2s ease;
 `
 
 function DownChevron({$open}) {
     return (
-        <DownChevronStyle $open={$open}>
+        // Syntaxe JSX cohérente avec la syntaxe CSS :
+        // className={styles.class}
+        // className={styles["class-name"]}
+        <DownChevronStyle className={styles["down-chevron"]} $open={$open}>
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_142304_633)">
                 {/* Invalid DOM property `clip-path`. Did you mean `clipPath`? */}
