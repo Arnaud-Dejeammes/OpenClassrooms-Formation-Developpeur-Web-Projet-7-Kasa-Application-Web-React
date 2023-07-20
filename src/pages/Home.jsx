@@ -6,6 +6,7 @@
 // import styled from "styled-components"
 import styles from "../styles/Home.module.css";
 import Banner from "../components/Banner";
+import Gallery from "../components/Gallery.jsx";
 
 // const HomeStyle = styled.div``
 
@@ -16,6 +17,7 @@ function Home() {
   return (
     <div className={styles.home}>
       <Banner text={slogan}/>
+      <Gallery/>
     </div>
   );
 }

@@ -1,0 +1,13 @@
+.gallery {
+    box-sizing: border-box;
+    /* A voir si cela doit être appliqué à l'ensemble du site */
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    justify-content: space-between;
+
+    max-width: 1240px;
+    /* height: 829px; */
+    padding: 56px 50px 56px 50px;    
+}
