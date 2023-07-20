@@ -3,7 +3,7 @@
 import {useState} from "react";
 import Card from "./Card";
 import styles from "../styles/Gallery.module.css"
-import accommodationData from "../data/accommodationDatabase.json";
+import accommodationsData from "../data/accommodationsDatabase.json";
 
 // Upload and reveal on Scroll
 // Intersection Observer API
@@ -19,7 +19,7 @@ function Gallery() {
 
     // useEffect : hook pour créer une instance d'observation d'intersection
     
-    const [jsonData] = useState(accommodationData);
+    const [accommodations] = useState(accommodationsData);
     // const cardHeight = 340;
     // const [loadedCards, setLoadedCards] = useState(0);
 
@@ -50,7 +50,7 @@ function Gallery() {
         <main>
             <div className={styles.gallery}>
                 {/* ul et li à intégrer */}
-                {jsonData.map(data => {
+                {accommodations.map(data => {
                     return (
                         <Card key={data.id} title={data.title}/>
                     );

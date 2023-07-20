@@ -1,13 +1,14 @@
 // Régler l'application de reset et du style body à l'ensemble des pages !!!
 
-import PropTypes from "prop-types"
-import AccommodationDatabase from "../data/accommodationDatabase.json";
+import PropTypes from "prop-types";
+// import AccommodationDatabase from "../data/accommodationsDatabase.json";
+// import Accommodations from "../data/accommodationsDatabase.json";
 
 function Accommodation() {
     return (
       <div className="App">Logement</div>
     )
-}
+};
 
 // Sécurisation des props et valeurs par défaut
 // Choix de PropTypes vs TypeScript (voir les commentaires en bas de page)
