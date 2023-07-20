@@ -11,9 +11,11 @@ import Banner from "../components/Banner";
 
 // function App() {
 function Home() {
+  const slogan = "Chez vous, partout et ailleurs"
+
   return (
     <div className={styles.home}>
-      <Banner/>          
+      <Banner text={slogan}/>
     </div>
   );
 }

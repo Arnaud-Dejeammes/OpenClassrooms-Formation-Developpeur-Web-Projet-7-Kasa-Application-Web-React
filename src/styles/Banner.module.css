@@ -12,11 +12,12 @@
     background: #000;
 
     /* background-image: url(../assets/home-banner.jpg); */
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../assets/home-banner.jpg);
+    /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../assets/home-banner.jpg);
+    background: url(../assets/about-banner.jpg); */
     /* Pour plus de vert et de bleu */
     /* background: linear-gradient(rgba(0, 100, 150, 0.3), rgba(0, 100, 150, 0.3)), url(../assets/home-banner.jpg); */
-    background-size: cover;
-    background-position: center;    
+    /* background-size: cover;
+    background-position: center; */
 }  
 
 .banner h1 {
